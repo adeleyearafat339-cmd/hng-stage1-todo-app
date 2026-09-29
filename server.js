@@ -45,6 +45,8 @@ app.delete('/api/tasks/:id', (req, res) => {
   res.json({ message: 'Task deleted successfully' });
 });
 
+app.use(express.static('public'));
+
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
