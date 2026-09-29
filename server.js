@@ -11,9 +11,9 @@ app.use(cors());
 // Temporary in-memory storage for your tasks and notes
 let tasks = [];
 
-// 1. Test route
+// Serve the frontend UI at the root URL
 app.get('/', (req, res) => {
-  res.send('HNG Stage 1 To-Do API is running live!');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 // 2. Get all tasks
